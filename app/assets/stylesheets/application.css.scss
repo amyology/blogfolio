@@ -10,6 +10,12 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
+
+ @import "materialize/components/color";
+ $secondary-color: color("pink", "lighten-2") !default;
+ $link-color: color("pink", "lighten-2") !default;
+ @import "materialize";

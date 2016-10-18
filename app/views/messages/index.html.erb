@@ -1,0 +1,10 @@
+<h1>Messages</h1>
+
+<% @messages.each do |message| %>
+  <p>
+    Name: <%= message.name %><br>
+    Email: <%= message.email %><br>
+    Subject: <%= message.subject %><br>
+    Message: <%= message.message %>
+  </p><br>
+<% end %>

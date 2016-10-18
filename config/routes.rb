@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/' => 'index#index'
+
+  get '/messages' => 'messages#index'
+  post '/messages/' => 'messages#create'
+  get '/messages/:id' => 'messages#show'
+  delete '/messages/:id' => 'messages#destroy'
+  
+  get '/sent' => 'messages#sent'
 end

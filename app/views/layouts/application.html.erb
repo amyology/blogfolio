@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blogfolio</title>
+    <title>a.chan</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="/" class="brand-logo center white-text">a.chan</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/#" class="top-link">About</a></li>
+          <li><a href="/#resume" class="top-link">Resume</a></li>
+          <li><a href="/#portfolio" class="top-link">Portfolio</a></li>
+          <li><a href="/#contact" class="top-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <%= yield %>
+
+
+  <footer class="page-footer white">
+    <div class="footer-copyright black">
+      <div class="container" style="text-align: center">
+        &copy; <%= Time.zone.now.year %> Amy Chan</a>
+      </div>
+    </div>
+  </footer>
+
   </body>
 </html>

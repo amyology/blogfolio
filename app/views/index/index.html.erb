@@ -1,0 +1,168 @@
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="center border-div"><span class="border-box">a.chan</span></div>
+      <div class="row center">
+        <div class="center border-div"><span class="black-box">Web Developer</span></div>
+      </div>
+
+    </div>
+  </div>
+  <div class="parallax"><%= image_tag 'background1.jpg' %></div>
+</div>
+
+<div class="container content-section">
+  <div class="section">
+    <div class="row">
+      <div class="col l6 s12">
+      </div>
+      <div class="col l6 s12">
+        <h4>Hi!</h4>
+        <h5>My name is Amy Chan.</h5>
+        I am a full-stack developer based in Chicago. I am a web developer/designer at heart who took a brief detour to go to law school, but I am now back to doing what I love.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a name="resume"></a>
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <div class="center border-div"><span class="smaller-box">Resume</span></div>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+  <div class="parallax"><%= image_tag 'background2.jpg' %></div>
+</div>
+
+<div class="container content-section">
+  <div class="section">
+  Contact me for a copy of my resume.
+    <div>Skills:</div>
+    Ruby<br>
+    Rails<br>
+    Javascript<br>
+    AngularJS<br>
+    VueJS<br>
+    C#<br>
+    HTML<br>
+    CSS<br>
+    Sass<br>
+    Git<br>
+    SQL<br>
+    PostGreSQL<br>
+    Photoshop<br>
+    Unity Engine<br>
+  </div>
+</div>
+
+
+<a name="portfolio"></a>
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <div class="center border-div"><span class="smaller-box">Portfolio</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><%= image_tag 'background3.jpg' %></div>
+</div>
+
+<div class="container content-section">
+  <div class="section">
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h5 class="center">ColorCrush</h5>
+
+          <p class="light">Description here.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h5 class="center">Project 2</h5>
+
+          <p class="light">Description here.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h5 class="center">Project 3</h5>
+
+          <p class="light">Description here.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <div class="center border-div"><span class="smaller-box">Contact</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><%= image_tag 'background4.jpg' %></div>
+</div>
+
+<div class="container" style="padding-top: 1em">
+  <div class="row">
+    <div class="col l6 s12">
+      <a name="contact"></a>
+      <h4>Contact Me</h4>
+      <br>
+      <%= form_tag '/messages', method: :post do %>
+        
+        <div class="input-field">
+          <i class="material-icons prefix">perm_identity</i>
+          <%= label_tag :name %>
+          <%= text_field_tag :name %><br>
+        </div>
+
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <%= label_tag :email %>
+          <%= text_field_tag :email %><br>
+        </div>
+
+        <div class="input-field">
+          <i class="material-icons prefix">subject</i>
+          <%= label_tag :subject %>
+          <%= text_field_tag :subject %><br>
+        </div>
+
+        <div class="input-field">
+          <i class="material-icons prefix">mode_edit</i>
+          <%= label_tag :message %>
+          <%= text_area_tag :message, nil, class: 'materialize-textarea' %><br>
+        </div>
+        
+        <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
+          Send <i class="material-icons right">send</i>
+        <% end %>
+      <% end %>
+
+    </div>
+    <div class="col l1"></div>
+    <div class="col l5 s12">
+      <h4>Find Me</h4>
+      <ul>
+        <li><a href="http://github.com/amyology"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/amy-chan"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
