@@ -21,9 +21,21 @@
           <li><a href="/#portfolio" class="top-link">Portfolio</a></li>
           <li><a href="/#contact" class="top-link">Contact</a></li>
         </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons hide-on-large-and-up pink-text text-lighten-2">menu</i></a>
       </div>
     </nav>
   </div>
+
+  <ul id="slide-out" class="side-nav show">
+    <div><a href="/" class="center">a.chan</a></div>
+    <div><a href="/#">About</a></div>
+    <div><a href="/#resume">Resume</a></div>
+    <div><a href="/#portfolio">Portfolio</a></div>
+    <div><a href="/#contact">Contact</a></div>
+  </ul>
+
+  <div class="notice"><%= notice %></div>
+  <div class="alert"><%= alert %></div>
 
 
   <%= yield %>

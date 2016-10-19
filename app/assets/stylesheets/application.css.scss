@@ -16,6 +16,7 @@
  */
 
  @import "materialize/components/color";
+ $primary-color: color("pink", "lighten-2") !default;
  $secondary-color: color("pink", "lighten-2") !default;
  $link-color: color("pink", "lighten-2") !default;
  @import "materialize";

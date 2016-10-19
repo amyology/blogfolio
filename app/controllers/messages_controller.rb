@@ -11,6 +11,10 @@ class MessagesController < ApplicationController
   def sent
   end
 
+  def new
+    @message = Message.new
+  end
+
   def create
     @message = Message.new(
       name: params[:name],
@@ -20,6 +24,8 @@ class MessagesController < ApplicationController
       )
     if @message.save
       redirect_to '/sent'
+    else
+      render :new
     end
   end
 
