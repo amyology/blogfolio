@@ -8,7 +8,7 @@
 
       <%= form_tag '/messages', method: :post do %>
         
-        <div class="pink-text text-lighten-2">
+        <div class="cyan-text text-darken-1">
           <% if @message.errors[:name].any? %>
             <%= "Name " + @message.errors[:name].join(", ") %>
           <% end %>
@@ -19,7 +19,7 @@
           <%= text_field_tag :name, @message.name, class: 'validate' %><br>
         </div>
 
-        <div class="pink-text text-lighten-2">
+        <div class="cyan-text text-darken-1">
           <% if @message.errors[:email].any? %>
             <%= "Email " + @message.errors[:email].join(", ") %>
           <% end %>
@@ -30,7 +30,7 @@
           <%= text_field_tag :email, @message.email, class: 'validate' %><br>
         </div>
 
-        <div class="pink-text text-lighten-2">
+        <div class="cyan-text text-darken-1">
           <% if @message.errors[:subject].any? %>
             <%= "Subject " + @message.errors[:subject].join(", ") %>
           <% end %>
@@ -41,7 +41,7 @@
           <%= text_field_tag :subject, @message.subject, class: 'validate' %><br>
         </div>
 
-        <div class="pink-text text-lighten-2">
+        <div class="cyan-text text-darken-1">
           <% if @message.errors[:message].any? %>
             <%= "Message " + @message.errors[:message].join(", ") %>
           <% end %>
