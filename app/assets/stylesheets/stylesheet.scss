@@ -93,6 +93,11 @@ nav.large a.brand-logo {
 
 nav.large i.material-icons {
   line-height: 2.4em;
+  @include slow-transition;
+}
+
+nav.small i.material-icons {
+  @include slow-transition;
 }
 
 nav ul a.active {

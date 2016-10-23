@@ -24,9 +24,9 @@
 
   $(document).on("scroll",function(){
       if($(document).scrollTop()>100){
-          $("nav").removeClass("large");
+          $("nav").removeClass("large").addClass("small");
       } else{
-          $("nav").addClass("large");
+          $("nav").removeClass("small").addClass("large");
       }
   });
 
