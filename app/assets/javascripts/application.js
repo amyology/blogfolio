@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.smooth-scroll.min
 //= require materialize
 //= require_tree .

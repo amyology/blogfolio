@@ -1,5 +1,5 @@
 (function($){
-  
+
   $(function(){
     $('.button-collapse').sideNav({
       menuWidth: 210,
@@ -10,11 +10,12 @@
   });
 
   $(document).ready(function(){
-    $('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
 
     $('.scrollspy').scrollSpy();
 
     Materialize.updateTextFields();
+
+    $('a').smoothScroll();
   });
 
 })(jQuery);
