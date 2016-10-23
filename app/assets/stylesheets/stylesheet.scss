@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
 $dark-gray: #212121;
+$light-gray: #9E9E9E;
 
 @mixin link-active {
   color: #FFF;
@@ -7,10 +9,10 @@ $dark-gray: #212121;
 }
 
 @mixin slow-transition {
-  transition: all 1s;
-  -moz-transition: all 1s;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 body {
@@ -18,8 +20,12 @@ body {
   font-size: 1.1em;
 }
 
-a:hover {
+main a:hover {
   opacity: 0.5;
+  @include slow-transition;
+}
+
+main a:not(:hover) {
   @include slow-transition;
 }
 
@@ -32,7 +38,7 @@ a:hover {
 }
 
 .top-link {
-  color: #9E9E9E;
+  color: $light-gray;
   font-size: 1em;
 }
 
@@ -83,6 +89,10 @@ nav.large {
 
 nav.large a.brand-logo {
   font-size: 2em;
+}
+
+nav.large i.material-icons {
+  line-height: 2.4em;
 }
 
 nav ul a.active {
