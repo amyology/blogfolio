@@ -11,15 +11,17 @@
 
   <body>
 
+  <div class="loader"></div>
+
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper black">
-        <a href="/" class="brand-logo center white-text table-of-contents">a.chan</a>
+        <a><%= link_to 'a.chan', '/', class: 'brand-logo center white-text' %></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="#about" class="top-link">About</a></li>
-          <li><a href="#resume" class="top-link">Resume</a></li>
-          <li><a href="#portfolio" class="top-link">Portfolio</a></li>
-          <li><a href="#contact" class="top-link">Contact</a></li>
+          <li><%= link_to 'About', '#about', class: 'top-link' %></li>
+          <li><%= link_to 'Resume', '#resume', class: 'top-link' %></li>
+          <li><%= link_to 'Portfolio', '#portfolio', class: 'top-link' %></li>
+          <li><%= link_to 'Contact', '#contact', class: 'top-link' %></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons hide-on-large-and-up pink-text text-lighten-2">menu</i></a>
       </div>
@@ -27,11 +29,11 @@
   </div>
 
   <ul id="slide-out" class="side-nav show">
-    <div><a href="#" class="center">a.chan</a></div>
-    <div><a href="#about">About</a></div>
-    <div><a href="#resume">Resume</a></div>
-    <div><a href="#portfolio">Portfolio</a></div>
-    <div><a href="#contact">Contact</a></div>
+    <div><%= link_to 'a.chan', '/', class: 'center' %></div>
+    <div><%= link_to 'About', '#about' %></div>
+    <div><%= link_to 'Resume', '#resume' %></div>
+    <div><%= link_to 'Portfolio', '#portfolio' %></div>
+    <div><%= link_to 'Contact', '#contact' %></div>
   </ul>
 
   <div class="notice"><%= notice %></div>

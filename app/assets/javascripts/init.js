@@ -18,4 +18,8 @@
     $('a').smoothScroll();
   });
 
+  $(window).load(function() {
+    $(".loader").fadeOut("slow");
+  })
+
 })(jQuery);
