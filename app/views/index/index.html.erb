@@ -148,8 +148,12 @@
     <div class="col l5 s12">
       <h4>Find Me</h4>
       <ul>
-        <li><a href="http://github.com/amyology"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/amy-chan"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+        <li><%= link_to 'http://github.com/amyology' do %>
+          <i class="fa fa-github" aria-hidden="true"></i> GitHub
+        <% end %></li>
+        <li><%= link_to 'https://www.linkedin.com/in/amy-chan' do %>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+        <% end %></li>
       </ul>
     </div>
   </div>

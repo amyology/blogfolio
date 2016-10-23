@@ -22,4 +22,12 @@
     $(".loader").fadeOut("slow");
   })
 
+  $(document).on("scroll",function(){
+      if($(document).scrollTop()>100){
+          $("nav").removeClass("large");
+      } else{
+          $("nav").addClass("large");
+      }
+  });
+
 })(jQuery);

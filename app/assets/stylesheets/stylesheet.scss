@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+$dark-gray: #212121;
+
+@mixin link-active {
+  color: #FFF;
+  background-color: $dark-gray;
+}
+
+@mixin slow-transition {
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+}
 
 body {
   font-family: 'Inconsolata', monospace;
   font-size: 1.1em;
+}
+
+a:hover {
+  opacity: 0.5;
+  @include slow-transition;
 }
 
 .content-section {
@@ -19,8 +37,8 @@ body {
 }
 
 .top-link:hover {
-  color: #FFF;
-  background-color: #212121;
+  @include link-active;
+  opacity: 1;
 }
 
 .border-box {
@@ -53,9 +71,16 @@ body {
   margin-top: 0.5em;
 }
 
+nav {
+  @include slow-transition;
+}
+
+nav.large {
+  height: 100px !important;
+}
+
 nav ul a.active {
-  background: #212121;
-  color: #FFF;
+  @include link-active;
 }
 
 .loader {
@@ -65,5 +90,5 @@ nav ul a.active {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url('loading.svg') 50% 50% no-repeat #fff;
+  background: url('https://s3-us-west-2.amazonaws.com/blogfolio/loading.svg') 50% 50% no-repeat #fff;
 }
