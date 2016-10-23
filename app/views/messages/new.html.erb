@@ -1,66 +1,66 @@
 <div class="page-container">
-<div class="row">
-<div class="col l3 m1"></div>
-<div class="col l6 m10 s12">
+  <div class="row">
+    <div class="col l3 m1"></div>
+    <div class="col l6 m10 s12">
+      <br><br>
+      <h4 class="center">Contact Me</h4>
+      <br>
 
-  <h4 class="center">Contact Me</h4>
-  <br>
+      <%= form_tag '/messages', method: :post do %>
+        
+        <div class="pink-text text-lighten-2">
+          <% if @message.errors[:name].any? %>
+            <%= "Name " + @message.errors[:name].join(", ") %>
+          <% end %>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">perm_identity</i>
+          <%= label_tag :name, nil, class: 'active' %>
+          <%= text_field_tag :name, @message.name, class: 'validate' %><br>
+        </div>
 
-  <%= form_tag '/messages', method: :post do %>
-    
-    <div class="pink-text text-lighten-2">
-      <% if @message.errors[:name].any? %>
-        <%= "Name " + @message.errors[:name].join(", ") %>
+        <div class="pink-text text-lighten-2">
+          <% if @message.errors[:email].any? %>
+            <%= "Email " + @message.errors[:email].join(", ") %>
+          <% end %>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <%= label_tag :email, nil, class: 'active' %>
+          <%= text_field_tag :email, @message.email, class: 'validate' %><br>
+        </div>
+
+        <div class="pink-text text-lighten-2">
+          <% if @message.errors[:subject].any? %>
+            <%= "Subject " + @message.errors[:subject].join(", ") %>
+          <% end %>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">subject</i>
+          <%= label_tag :subject, nil, class: 'active' %>
+          <%= text_field_tag :subject, @message.subject, class: 'validate' %><br>
+        </div>
+
+        <div class="pink-text text-lighten-2">
+          <% if @message.errors[:message].any? %>
+            <%= "Message " + @message.errors[:message].join(", ") %>
+          <% end %>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">mode_edit</i>
+          <%= label_tag :message, nil, class: 'active' %>
+          <%= text_area_tag :message, @message.message, class: 'materialize-textarea validate' %><br>
+        </div>
+        
+        <br>
+        <div class="center">
+          <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
+            Send <i class="material-icons right">send</i>
+          <% end %>
+        </div>
       <% end %>
-    </div>
-    <div class="input-field">
-      <i class="material-icons prefix">perm_identity</i>
-      <%= label_tag :name, nil, class: 'active' %>
-      <%= text_field_tag :name, @message.name, class: 'validate' %><br>
-    </div>
 
-    <div class="pink-text text-lighten-2">
-      <% if @message.errors[:email].any? %>
-        <%= "Email " + @message.errors[:email].join(", ") %>
-      <% end %>
     </div>
-    <div class="input-field">
-      <i class="material-icons prefix">email</i>
-      <%= label_tag :email, nil, class: 'active' %>
-      <%= text_field_tag :email, @message.email, class: 'validate' %><br>
-    </div>
-
-    <div class="pink-text text-lighten-2">
-      <% if @message.errors[:subject].any? %>
-        <%= "Subject " + @message.errors[:subject].join(", ") %>
-      <% end %>
-    </div>
-    <div class="input-field">
-      <i class="material-icons prefix">subject</i>
-      <%= label_tag :subject, nil, class: 'active' %>
-      <%= text_field_tag :subject, @message.subject, class: 'validate' %><br>
-    </div>
-
-    <div class="pink-text text-lighten-2">
-      <% if @message.errors[:message].any? %>
-        <%= "Message " + @message.errors[:message].join(", ") %>
-      <% end %>
-    </div>
-    <div class="input-field">
-      <i class="material-icons prefix">mode_edit</i>
-      <%= label_tag :message, nil, class: 'active' %>
-      <%= text_area_tag :message, @message.message, class: 'materialize-textarea validate' %><br>
-    </div>
-    
-    <br>
-    <div class="center">
-      <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
-        Send <i class="material-icons right">send</i>
-      <% end %>
-    </div>
-  <% end %>
-
-</div>
-<div class="col l3 m1"></div>
-</div>
+    <div class="col l3 m1"></div>
+  </div>
 </div>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :admins
   
-  root to: "index#index"
-  get '/' => 'index#index'
+  root to: "messages#home"
+  get '/' => 'messages#home'
 
   get '/messages' => 'messages#index'
   get '/messages/new' => 'messages#new'

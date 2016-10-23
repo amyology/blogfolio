@@ -1,5 +1,10 @@
 class MessagesController < ApplicationController
 
+  include MessagesHelper
+
+  def home
+  end
+
   def index
     @messages = Message.all
   end
