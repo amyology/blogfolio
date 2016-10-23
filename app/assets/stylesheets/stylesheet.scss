@@ -6,7 +6,7 @@ body {
 }
 
 .content-section {
-  min-height: 35vh;
+  min-height: 40vh;
 }
 
 .page-container {
@@ -51,4 +51,9 @@ body {
 .fa {
   font-size: 1.5em;
   margin-top: 0.5em;
+}
+
+nav ul a.active {
+  background: #212121;
+  color: #FFF;
 }
