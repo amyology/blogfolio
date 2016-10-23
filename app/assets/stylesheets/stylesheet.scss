@@ -76,7 +76,13 @@ nav {
 }
 
 nav.large {
-  height: 100px !important;
+  height: 5em;
+  line-height: 5em;
+  font-size: 1.1em;
+}
+
+nav.large a.brand-logo {
+  font-size: 2em;
 }
 
 nav ul a.active {
