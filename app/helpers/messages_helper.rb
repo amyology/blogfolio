@@ -5,6 +5,7 @@ module MessagesHelper
       'Ruby',
       'Rails',
       'Javascript',
+      'jQuery',
       'AngularJS',
       'Vue.js',
       'C#',

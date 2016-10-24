@@ -2,13 +2,12 @@
   <div class="section no-pad-bot">
     <div class="container">
       <div class="center border-div">
-        <span class="border-box">a.chan</span>
+        <span class="border-box animated slowFade">a.chan</span>
       </div>
       <div class="row center">
         <div class="center border-div">
-          <div style="margin: 7
-          px">
-            <span class="black-box">Web Developer</span>
+          <div style="margin: 7px">
+            <span class="black-box animated slowerFade">Web Developer</span>
           </div>
         </div>
       </div>
@@ -24,9 +23,11 @@
       <div class="col l6 s12">
       </div>
       <div class="col l6 s12">
-        <h4>Hi!</h4>
-        <h5>My name is Amy Chan.</h5>
-        I am a full-stack developer based in Chicago. I am a web developer/designer at heart who took a brief detour to go to law school and am now back to doing what I love.
+        <h4 class="show-hi invisible">Hi!</h4>
+        <h5 class="show-name invisible">My name is Amy Chan.</h5>
+        <div class="show-bio invisible">
+          I am a full-stack developer based in Chicago. I am a web developer/designer at heart who took a brief detour to go to law school and am now back to doing what I love.
+        </div>
       </div>
     </div>
   </div>
@@ -50,9 +51,11 @@
   <div class="section">
     <div class="row"><h5>Skills</h5></div>
     <div class="row">
+      <ul class="show-list invisible">
       <% skills.each do |skill| %>
-        <div class="col s6 m4 l3"><%= skill %></div>
+        <div class="col s6 m4 l3"><li><%= skill %></li></div>
       <% end %>
+      </ul>
     </div>
     <div class="row"><a href="#contact">Contact</a> me for a copy of my resume.</div>
   </div>

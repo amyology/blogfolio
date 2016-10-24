@@ -121,3 +121,11 @@ nav ul a.active {
   z-index: 9999;
   background: url('https://s3-us-west-2.amazonaws.com/blogfolio/loading.svg') 50% 50% no-repeat #fff;
 }
+
+.invisible {
+  visibility: hidden;
+}
+
+.appear {
+  visibility: visible;
+}

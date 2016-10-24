@@ -1,0 +1,14 @@
+@mixin animate-this($animation-type, $time) {
+  -webkit-animation: $animation-type $time;
+  -moz-animation: $animation-type $time;
+  -o-animation: $animation-type $time;
+  animation: $animation-type $time;
+}
+
+.slowFade {
+  @include animate-this(fadeIn, 1s);
+}
+
+.slowerFade {
+  @include animate-this(fadeIn, 2s);
+}
