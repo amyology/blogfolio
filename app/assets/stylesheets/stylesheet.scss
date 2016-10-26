@@ -125,3 +125,12 @@ nav ul a.active {
 .invisible {
   visibility: hidden;
 }
+
+.thumb {
+  opacity: 0.5;
+  @include slow-transition;
+}
+
+.thumb:hover {
+  opacity: 1;
+}

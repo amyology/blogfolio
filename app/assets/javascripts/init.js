@@ -34,7 +34,7 @@
     {selector: '.show-hi', offset: 0, callback: function() {
       $('.show-hi').removeClass('invisible').addClass('animated slideInRight');
     }},
-    {selector: '.show-name', offset: 300, callback: function() {
+    {selector: '.show-name', offset: 250, callback: function() {
       $('.show-name').removeClass('invisible').addClass('animated slideInRight');
     }},
     {selector: '.show-bio', offset: 350, callback: function() {
@@ -46,7 +46,7 @@
     {selector: '.show-list', offset: 205, callback: function(el) {
       $('.show-list').removeClass('invisible').addClass('animated slideInLeft');
     }},
-    {selector: '.show-contact', offset: 250, callback: function() {
+    {selector: '.show-contact', offset: 240, callback: function() {
       $('.show-contact').removeClass('invisible').addClass('animated slideInLeft');
     }},
     {selector: '.project1', offset: 0, callback: function() {
@@ -55,7 +55,7 @@
     {selector: '.project2', offset: 150, callback: function() {
       $('.project2').removeClass('invisible').addClass('animated slideInDown');
     }},
-    {selector: '.project3', offset: 300, callback: function() {
+    {selector: '.project3', offset: 200, callback: function() {
       $('.project3').removeClass('invisible').addClass('animated slideInDown');
     }},
     {selector: '.show-form-header', offset: 0, callback: function() {
@@ -64,10 +64,10 @@
     {selector: '.show-form', offset: 100, callback: function() {
       $('.show-form').removeClass('invisible').addClass('animated fadeIn');
     }},
-    {selector: '.show-link-header', offset: 350, callback: function() {
+    {selector: '.show-link-header', offset: 250, callback: function() {
       $('.show-link-header').removeClass('invisible').addClass('animated fadeIn');
     }},
-    {selector: '.show-link', offset: 450, callback: function() {
+    {selector: '.show-link', offset: 300, callback: function() {
       $('.show-link').removeClass('invisible').addClass('animated fadeIn');
     }}
   ];
