@@ -6,9 +6,5 @@
 }
 
 .slowFade {
-  @include animate-this(fadeIn, 1s);
-}
-
-.slowerFade {
   @include animate-this(fadeIn, 2s);
 }
