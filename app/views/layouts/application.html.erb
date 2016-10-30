@@ -24,7 +24,12 @@
           <li><%= link_to 'Portfolio', '#portfolio', class: 'top-link' %></li>
           <li><%= link_to 'Contact', '#contact', class: 'top-link' %></li>
         </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons hide-on-large-and-up cyan-text text-darken-1">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if admin_signed_in? %>
+            <li><%= link_to 'Logout', '/admins/sign_out', method: :delete, class: 'top-link' %></li>
+          <% end %>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons hide-on-large-and-up cyan-text text-lighten-1">menu</i></a>
       </div>
     </nav>
   </div>
@@ -35,6 +40,9 @@
     <div><%= link_to 'Resume', '#resume' %></div>
     <div><%= link_to 'Portfolio', '#portfolio' %></div>
     <div><%= link_to 'Contact', '#contact' %></div>
+    <% if admin_signed_in? %>
+      <div><%= link_to 'Logout', '/admins/sign_out', method: :delete %></div>
+    <% end %>
   </ul>
 
 

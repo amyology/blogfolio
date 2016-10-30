@@ -17,7 +17,7 @@
  */
 
  @import "materialize/components/color";
- $primary-color: color("cyan", "darken-1") !default;
- $secondary-color: color("cyan", "darken-1") !default;
- $link-color: color("cyan", "darken-1") !default;
+ $primary-color: color("cyan", "lighten-1") !default;
+ $secondary-color: color("cyan", "lighten-1") !default;
+ $link-color: color("cyan", "lighten-1") !default;
  @import "materialize";
