@@ -23,11 +23,13 @@
   })
 
   $(document).on('scroll',function(){
-      if($(document).scrollTop()>100){
+      if ($(document).scrollTop() > 100) {
           $('nav').removeClass('large').addClass('small');
-          $('.arrow').addClass('invisible');
-      } else{
+          $('.arrowdown').addClass('invisible');
+          $('.arrowup').removeClass('invisible');
+      } else {
           $('nav').removeClass('small').addClass('large');
+          $('.arrowup').addClass('invisible');
       }
   });
 
@@ -77,5 +79,5 @@
 })(jQuery);
 
 function disappear(){
-  $('.arrow').addClass('invisible');
+  $('.arrowdown').addClass('invisible');
 }

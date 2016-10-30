@@ -1,8 +1,10 @@
-<%= link_to image_tag('down.png'), '#about', class: 'arrow animated bounce', onclick: 'disappear()' %>
+<%= link_to image_tag('https://s3-us-west-2.amazonaws.com/blogfolio/down.png'), '#about', class: 'arrowdown animated bounce', onclick: 'disappear()' %>
+
+<%= link_to image_tag('up.png'), '#scrolltop', class: 'arrowup invisible' %>
 
 <div class="parallax-container valign-wrapper landing">
-  <div class="section no-pad-bot scrollspy" id="about">
-    <div class="container">
+  <div class="section no-pad-bot">
+    <div class="container scrollspy" id="about">
       <div class="center border-div animated slideInDown">
         <span class="border-box">a.chan</span>
       </div>
@@ -16,7 +18,7 @@
 
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'bg1.jpg' %></div>
+  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/bg1.jpg' %></div>
 </div>
 
 <div class="container content-section">
@@ -46,7 +48,7 @@
 
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'bg2.jpg' %></div>
+  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/bg2.jpg' %></div>
 </div>
 
 <div class="container content-section">
@@ -76,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'bg3.jpg' %></div>
+  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/bg3.jpg' %></div>
 </div>
 
 <div class="container content-section">
@@ -85,8 +87,11 @@
       <div class="col s12 m4">
         <div class="icon-block project1 invisible">
           <h5 class="center">ColorCrush</h5>
-          <p><%= image_tag 'colorcrush-thumb.png', class: 'responsive-img thumb' %>
-          <p class="light">Description here.</p>
+          <p><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/colorcrush-thumb.png', class: 'responsive-img thumb' %>
+          <p style="text-align: center">
+            <%= link_to 'Demo', 'http://color-crush.herokuapp.com' %> |
+            <%= link_to 'Code', 'https://github.com/amyology/colorcrush' %>
+          </p>
         </div>
       </div>
 
@@ -119,13 +124,13 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'bg4.jpg' %></div>
+  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/bg4.jpg' %></div>
 </div>
 
 <div class="container" style="padding-top: 1em">
   <div class="row">
     <div class="col l6 s12">
-      <h4 class="show-form-header invisible">Contact Me</h4>
+      <h5 class="show-form-header invisible">Contact Me</h5>
       <br>
       <div class="show-form invisible">
       <%= form_tag '/messages', method: :post do %>
@@ -163,7 +168,7 @@
     </div>
     <div class="col l1"></div>
     <div class="col l5 s12">
-      <h4 class="show-link-header invisible">Find Me</h4>
+      <h5 class="show-link-header invisible">Find Me</h5>
       <ul class="show-link invisible">
         <li><%= link_to 'http://github.com/amyology' do %>
           <i class="fa fa-github" aria-hidden="true"></i> GitHub
