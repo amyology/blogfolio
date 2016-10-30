@@ -33,6 +33,10 @@ main a:not(:hover) {
   min-height: 40vh;
 }
 
+.landing {
+  min-height: 93vh;
+}
+
 .page-container {
   min-height: 81.5vh;
   padding: 10px;
@@ -133,4 +137,28 @@ nav ul a.active {
 
 .thumb:hover {
   opacity: 1;
+}
+
+.circle-text {
+  shape-outside: circle();
+  -webkit-shape-outside: circle();
+  float: left;
+  margin: 10px;
+}
+
+.arrow {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  @include slow-transition;
+  z-index: 9998;
+}
+
+.arrow:hover {
+  @include slow-transition;
+  opacity: 0.5;
 }

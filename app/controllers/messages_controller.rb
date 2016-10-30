@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_action :authenticate_superadmin!, only: [:index, :show, :destroy]
+
   include MessagesHelper
 
   def home

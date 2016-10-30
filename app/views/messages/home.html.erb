@@ -1,12 +1,14 @@
-<div class="parallax-container valign-wrapper scrollspy" id="about">
-  <div class="section no-pad-bot">
+<%= link_to image_tag('down.png'), '#about', class: 'arrow animated bounce', onclick: 'disappear()' %>
+
+<div class="parallax-container valign-wrapper landing">
+  <div class="section no-pad-bot scrollspy" id="about">
     <div class="container">
       <div class="center border-div animated slideInDown">
         <span class="border-box">a.chan</span>
       </div>
       <div class="row center">
         <div class="center border-div">
-          <div style="margin: 7px" class="animated slideInDown">
+          <div style="margin: 7px" class="animated slideInUp">
             <span class="black-box">Web Developer</span>
           </div>
         </div>
@@ -14,29 +16,28 @@
 
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/background1.jpg' %></div>
+  <div class="parallax"><%= image_tag 'bg1.jpg' %></div>
 </div>
 
 <div class="container content-section">
   <div class="section">
     <div class="row">
-      <div class="col l6 s12">
-        <p style="text-align: right"><%= image_tag 'me.png', class: 'circle' %></p>
-      </div>
-      <div class="col l6 s12">
-        <h4 class="show-hi invisible">Hi!</h4>
-        <h5 class="show-name invisible">My name is Amy Chan.</h5>
-        <div class="show-bio invisible">
+      <div class="col l3 m3"></div>
+      <div class="col l6 m6 s12">
+        <h5 class="show-name invisible center">Hi! My name is Amy Chan.</h5>
+        <%= image_tag 'me.png', class: 'circle responsive-img circle-text show-pic invisible', alt: 'this is me' %>
+        <div class="show-bio invisible"> <br>
           I am a full-stack developer based in Chicago. I am a web developer/designer at heart who took a brief detour to go to law school, learned some valuable skills while I was there, and am now back to doing what I love.
         </div>
       </div>
+      <div class="col l3 m3"></div>
     </div>
   </div>
 </div>
 
 
-<div class="parallax-container valign-wrapper scrollspy" id="resume">
-  <div class="section no-pad-bot">
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot scrollspy" id="resume">
     <div class="container">
       <div class="row center">
         <div class="center border-div"><span class="smaller-box">Resume</span></div>
@@ -45,33 +46,37 @@
 
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/background2.jpg' %></div>
+  <div class="parallax"><%= image_tag 'bg2.jpg' %></div>
 </div>
 
 <div class="container content-section">
   <div class="section">
-    <div class="row"><h5 class="show-skills invisible">Skills</h5></div>
+    <h5 class="center show-skills invisible">Skills</h5>
     <div class="row">
-      <ul class="show-list invisible">
-      <% skills.each do |skill| %>
-        <div class="col s6 m4 l3"><li><%= skill %></li></div>
-      <% end %>
-      </ul>
+      <div class="col m3 l3"></div>
+      <div class="col s12 m6 l6">
+        <ul class="show-list invisible">
+        <% skills.each do |skill| %>
+          <div class="col s6 m4 l3"><li><%= skill %></li></div>
+        <% end %>
+        </ul>
+      </div>
+      <div class="col m3 l3"></div>
     </div>
-    <div class="row show-contact invisible"><a href="#contact">Contact</a> me for a copy of my resume.</div>
+    <div class="center show-contact invisible"><a href="#contact">Contact</a> me for a copy of my resume.</div>
   </div>
 </div>
 
 
-<div class="parallax-container valign-wrapper scrollspy" id="portfolio">
-  <div class="section no-pad-bot">
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot scrollspy" id="portfolio">
     <div class="container">
       <div class="row center">
         <div class="center border-div"><span class="smaller-box">Portfolio</span></div>
       </div>
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/background3.jpg' %></div>
+  <div class="parallax"><%= image_tag 'bg3.jpg' %></div>
 </div>
 
 <div class="container content-section">
@@ -106,15 +111,15 @@
 </div>
 
 
-<div class="parallax-container valign-wrapper scrollspy" id="contact">
-  <div class="section no-pad-bot">
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot scrollspy" id="contact">
     <div class="container">
       <div class="row center">
         <div class="center border-div"><span class="smaller-box">Contact</span></div>
       </div>
     </div>
   </div>
-  <div class="parallax"><%= image_tag 'https://s3-us-west-2.amazonaws.com/blogfolio/background4.jpg' %></div>
+  <div class="parallax"><%= image_tag 'bg4.jpg' %></div>
 </div>
 
 <div class="container" style="padding-top: 1em">
