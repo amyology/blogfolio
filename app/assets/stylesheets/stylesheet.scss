@@ -15,6 +15,16 @@ $light-gray: #9E9E9E;
   -o-transition: all 0.5s;
 }
 
+@media screen and (max-width: 992px) {
+  main {
+    font-size: 3rem;
+  }
+
+  .headline {
+    font-size: 6rem;
+  }
+}
+
 body {
   font-family: 'Inconsolata', monospace;
   font-size: 1.1em;
@@ -38,7 +48,7 @@ main a:not(:hover) {
 }
 
 .page-container {
-  min-height: 81.5vh;
+  min-height: 90.5vh;
   padding: 10px;
 }
 
