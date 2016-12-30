@@ -2,7 +2,7 @@
 
   $(function(){
     $('.button-collapse').sideNav({
-      menuWidth: 500,
+      menuWidth: 200,
       closeOnClick: true
     });
 
@@ -62,16 +62,16 @@
       $('.project3').removeClass('invisible').addClass('animated slideInDown');
     }},
     {selector: '.show-form-header', offset: 0, callback: function() {
-      $('.show-form-header').removeClass('invisible').addClass('animated slideInDown');
+      $('.show-form-header').removeClass('invisible').addClass('animated slideInLeft');
     }},
     {selector: '.show-form', offset: 150, callback: function() {
-      $('.show-form').removeClass('invisible').addClass('animated slideInDown');
+      $('.show-form').removeClass('invisible').addClass('animated slideInLeft');
     }},
     {selector: '.show-link-header', offset: 0, callback: function() {
-      $('.show-link-header').removeClass('invisible').addClass('animated slideInDown');
+      $('.show-link-header').removeClass('invisible').addClass('animated slideInLeft');
     }},
     {selector: '.show-link', offset: 150, callback: function() {
-      $('.show-link').removeClass('invisible').addClass('animated slideInUp');
+      $('.show-link').removeClass('invisible').addClass('animated slideInLeft');
     }}
   ];
   Materialize.scrollFire(options);

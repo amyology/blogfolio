@@ -15,19 +15,8 @@ $light-gray: #9E9E9E;
   -o-transition: all 0.5s;
 }
 
-@media screen and (max-width: 992px) {
-  main {
-    font-size: 3rem;
-  }
-
-  .headline {
-    font-size: 6rem;
-  }
-}
-
 body {
-  font-family: 'Inconsolata', monospace;
-  font-size: 1.1em;
+  font-family: 'Inconsolata', monospace; 
 }
 
 main a:hover {
@@ -44,7 +33,7 @@ main a:not(:hover) {
 }
 
 .landing {
-  min-height: 100vh;
+  min-height: 92vh;
 }
 
 .page-container {
@@ -106,7 +95,7 @@ nav {
 nav.large {
   height: 5em;
   line-height: 5em;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 nav.large a.brand-logo {
@@ -133,8 +122,9 @@ nav ul a.active {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url('https://s3-us-west-2.amazonaws.com/blogfolio/loading.svg') 50% 50% no-repeat #fff;
+  background: url('loading.svg') 50% 50% no-repeat #fff;
 }
+/* https://s3-us-west-2.amazonaws.com/blogfolio/loading.svg */
 
 .invisible {
   visibility: hidden;
