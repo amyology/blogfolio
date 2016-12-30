@@ -29,6 +29,11 @@ main a:not(:hover) {
   @include slow-transition;
 }
 
+.headline {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 .content-section {
   min-height: 40vh;
 }

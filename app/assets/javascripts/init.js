@@ -38,10 +38,10 @@
       $('.show-name').removeClass('invisible').addClass('animated slideInDown');
     }},
     {selector: '.show-pic', offset: 100, callback: function() {
-      $('.show-pic').removeClass('invisible').addClass('animated slideInDown');
+      $('.show-pic').removeClass('invisible').addClass('animated slideInLeft');
     }},
     {selector: '.show-bio', offset: 100, callback: function() {
-      $('.show-bio').removeClass('invisible').addClass('animated slideInUp');
+      $('.show-bio').removeClass('invisible').addClass('animated slideInRight');
     }},
     {selector: '.show-skills', offset: 0, callback: function() {
       $('.show-skills').removeClass('invisible').addClass('animated slideInDown');
@@ -68,10 +68,10 @@
       $('.show-form').removeClass('invisible').addClass('animated slideInLeft');
     }},
     {selector: '.show-link-header', offset: 0, callback: function() {
-      $('.show-link-header').removeClass('invisible').addClass('animated slideInLeft');
+      $('.show-link-header').removeClass('invisible').addClass('animated slideInRight');
     }},
     {selector: '.show-link', offset: 150, callback: function() {
-      $('.show-link').removeClass('invisible').addClass('animated slideInLeft');
+      $('.show-link').removeClass('invisible').addClass('animated slideInRight');
     }}
   ];
   Materialize.scrollFire(options);

@@ -5,11 +5,11 @@
 <div class="parallax-container valign-wrapper landing">
   <div class="section no-pad-bot">
     <div class="container scrollspy" id="about">
-      <div class="center border-div animated slideInDown">
+      <div class="center-align border-div animated slideInDown">
         <span class="border-box">a.chan</span>
       </div>
-      <div class="row center">
-        <div class="center border-div">
+      <div class="row center-align">
+        <div class="center-align border-div">
           <div style="margin: 7px" class="animated slideInUp">
             <span class="black-box">Web Developer</span>
           </div>
@@ -24,15 +24,15 @@
 <div class="container content-section">
   <div class="section">
     <div class="row">
-      <div class="col l2"></div>
+      <div class="col l2 m12 s12"></div>
       <div class="col l8 m12 s12">
-        <div class="headline show-name invisible center">Hi! My name is Amy Chan.</div>
+        <div class="headline show-name invisible center-align">Hi! My name is Amy Chan.</div>
         <%= image_tag 'me.png', class: 'circle responsive-img circle-text show-pic invisible', alt: 'this is me' %>
         <div class="show-bio invisible"> <br>
           I am a full-stack developer based in Chicago. I am a web developer/designer at heart who took a brief detour to go to law school, learned some valuable skills while I was there, and am now back to doing what I love.
         </div>
       </div>
-      <div class="col l2"></div>
+      <div class="col l2 m12 s12"></div>
     </div>
   </div>
 </div>
@@ -41,8 +41,8 @@
 <div class="parallax-container valign-wrapper">
   <div class="section no-pad-bot scrollspy" id="resume">
     <div class="container">
-      <div class="row center">
-        <div class="center border-div"><span class="smaller-box">Resume</span></div>
+      <div class="row center-align">
+        <div class="center-align border-div"><span class="smaller-box">Resume</span></div>
       </div>
       <br><br>
 
@@ -53,10 +53,10 @@
 
 <div class="container content-section">
   <div class="section">
-    <div class="headline center show-skills invisible">Skills</div>
+    <div class="headline center-align show-skills invisible">Skills</div>
     <div class="row">
       <div class="col l3"></div>
-      <div class="col s12 m12 l6" style="text-align: center">
+      <div class="col s12 m12 l6 center-align">
         <ul class="show-list invisible">
         <% skills.each do |skill| %>
           <div class="col s6 m4 l3"><li><%= skill %></li></div>
@@ -65,7 +65,7 @@
       </div>
       <div class="col l3"></div>
     </div>
-    <div class="center show-contact invisible"><a href="#contact">Contact</a> me for a copy of my resume.</div>
+    <div class="center-align show-contact invisible"><a href="#contact">Contact</a> me for a copy of my resume.</div>
   </div>
 </div>
 
@@ -73,8 +73,8 @@
 <div class="parallax-container valign-wrapper">
   <div class="section no-pad-bot scrollspy" id="portfolio">
     <div class="container">
-      <div class="row center">
-        <div class="center border-div"><span class="smaller-box">Portfolio</span></div>
+      <div class="row center-align">
+        <div class="center-align border-div"><span class="smaller-box">Portfolio</span></div>
       </div>
     </div>
   </div>
@@ -84,28 +84,28 @@
 <div class="container content-section">
   <div class="section">
     <div class="row">
-      <div class="col s12 m12">
+      <div class="col s12 m4 l4">
         <div class="icon-block project1 invisible">
-          <div class="headline center">ColorCrush</div>
+          <div class="headline center-align">ColorCrush</div>
           <p><%= image_tag 'colorcrush-thumb.png', class: 'responsive-img thumb', style: 'margin: auto' %>
-          <p style="text-align: center">
-            <%= link_to 'Demo', 'http://color-crush.herokuapp.com' %> |
-            <%= link_to 'Code', 'https://github.com/amyology/colorcrush' %>
+          <p class="center-align">
+            <%= link_to 'Live Demo', 'http://color-crush.herokuapp.com', target: 'new' %> |
+            <%= link_to 'Repository', 'https://github.com/amyology/colorcrush', target: 'new' %>
           </p>
         </div>
       </div>
 
-      <div class="col s12 m12">
+      <div class="col s12 m4 l4">
         <div class="icon-block project2 invisible">
-          <h5 class="center"> </h5>
+          <h5 class="center-align"> </h5>
 
           <p class="light"> </p>
         </div>
       </div>
 
-      <div class="col s12 m12">
+      <div class="col s12 m4 l4">
         <div class="icon-block project3 invisible">
-          <h5 class="center"> </h5>
+          <h5 class="center-align"> </h5>
 
           <p class="light"> </p>
         </div>
@@ -119,8 +119,8 @@
 <div class="parallax-container valign-wrapper">
   <div class="section no-pad-bot scrollspy" id="contact">
     <div class="container">
-      <div class="row center">
-        <div class="center border-div"><span class="smaller-box">Contact</span></div>
+      <div class="row center-align">
+        <div class="center-align border-div"><span class="smaller-box">Contact</span></div>
       </div>
     </div>
   </div>
@@ -170,10 +170,10 @@
     <div class="col l5 s12">
       <div class="headline show-link-header invisible">Find Me</div>
       <ul class="show-link invisible">
-        <li><%= link_to 'http://github.com/amyology' do %>
+        <li><%= link_to 'http://github.com/amyology', target: 'new' do %>
           <i class="fa fa-github" aria-hidden="true"></i> GitHub
         <% end %></li>
-        <li><%= link_to 'https://www.linkedin.com/in/amy-chan' do %>
+        <li><%= link_to 'https://www.linkedin.com/in/amy-chan', target: 'new' do %>
           <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
         <% end %></li>
       </ul>
