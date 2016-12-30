@@ -16,6 +16,7 @@ module MessagesHelper
       'SQL',
       'PostGreSQL',
       'Photoshop',
+      'Illustrator',
       'Unity 3D',
     ]
   end
