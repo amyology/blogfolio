@@ -5,7 +5,7 @@ $light-gray: #9E9E9E;
 
 @mixin link-active {
   color: #FFF;
-  background-color: $dark-gray;
+  background-color: rgba(255,255,255,0.05)
 }
 
 @mixin slow-transition {
@@ -30,7 +30,7 @@ main a:not(:hover) {
 }
 
 .headline {
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ main a:not(:hover) {
 }
 
 .landing {
-  min-height: 92vh;
+  min-height: 92.5vh;
 }
 
 .page-container {
@@ -77,7 +77,7 @@ main a:not(:hover) {
 }
 
 .black-box {
-  background-color: #000;
+  background-color: rgba(0,0,0,0.8);
   font-size: 2em;
   padding: 5px;
 }
@@ -99,13 +99,17 @@ nav {
 }
 
 nav.large {
-  height: 5em;
-  line-height: 5em;
+  height: 5.5em;
+  line-height: 5.5em;
   font-size: 1.1em;
 }
 
 nav.large a.brand-logo {
   font-size: 2em;
+}
+
+nav.small a.brand-logo {
+  font-size: 1.6em;
 }
 
 nav.large i.material-icons {
@@ -161,6 +165,7 @@ nav ul a.active {
   margin: 0 auto;
   @include slow-transition;
   z-index: 9998;
+  opacity: 0.8;
 }
 
 .arrowdown:hover {
@@ -183,5 +188,5 @@ nav ul a.active {
 
 .arrowup:hover {
   @include slow-transition;
-  opacity: 1;
+  opacity: 0.8;
 }
