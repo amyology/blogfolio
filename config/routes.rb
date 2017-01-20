@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get '/blog/archive' => 'posts#archive'
 
   resources :comments, except: [:show, :edit]
+  
+  get '/v1' => 'home#v1'
+
 end
