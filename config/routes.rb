@@ -20,4 +20,9 @@ Rails.application.routes.draw do
   
   get '/v1' => 'home#v1'
 
+  namespace :v1 do
+    root to: "home#index"
+    get '/' => 'home#index'
+  end
+
 end
