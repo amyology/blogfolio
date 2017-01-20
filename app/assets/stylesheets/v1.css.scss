@@ -12,8 +12,11 @@
  *
  *= require font-awesome
  *= require animate
- *= require prism
- *= require_tree .
- *= require_self
- *= require_tree ./v2
+ *= require_tree ./v1
  */
+
+ @import "materialize/components/color";
+ $primary-color: color("cyan", "accent-4") !default;
+ $secondary-color: color("cyan", "accent-4") !default;
+ $link-color: color("cyan", "accent-4") !default;
+ @import "materialize";
