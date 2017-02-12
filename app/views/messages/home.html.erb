@@ -131,33 +131,33 @@
       <div class="headline show-form-header invisible">Contact Me</div>
       <br>
       <div class="show-form invisible">
-      <%= form_tag '/messages', method: :post do %>
+      <%= form_for @message do |f| %>
         
         <div class="input-field">
           <i class="material-icons prefix">perm_identity</i>
-          <%= label_tag :name %>
-          <%= text_field_tag :name, nil, class: 'validate' %><br>
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'validate' %><br>
         </div>
 
         <div class="input-field">
           <i class="material-icons prefix">email</i>
-          <%= label_tag :email %>
-          <%= text_field_tag :email, nil, class: 'validate' %><br>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'validate' %><br>
         </div>
 
         <div class="input-field">
           <i class="material-icons prefix">subject</i>
-          <%= label_tag :subject %>
-          <%= text_field_tag :subject, nil, class: 'validate' %><br>
+          <%= f.label :subject %>
+          <%= f.text_field :subject, class: 'validate' %><br>
         </div>
 
         <div class="input-field">
           <i class="material-icons prefix">mode_edit</i>
-          <%= label_tag :message %>
-          <%= text_area_tag :message, nil, class: 'materialize-textarea validate' %><br>
+          <%= f.label :message %>
+          <%= f.text_area :message, class: 'materialize-textarea validate' %><br>
         </div>
         
-        <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
+        <%= f.button(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
           Send <i class="material-icons right">send</i>
         <% end %>
       <% end %><br>
