@@ -26,6 +26,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      AppMailer.message_email(@message).deliver_now
       redirect_to '/sent'
     else
       render :new
