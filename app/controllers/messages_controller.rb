@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   include MessagesHelper
 
   def home
+    @message = Message.new
   end
 
   def index
@@ -23,12 +24,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(
-      name: params[:name],
-      email: params[:email],
-      subject: params[:subject],
-      message: params[:message]
-      )
+    @message = Message.new(message_params)
     if @message.save
       redirect_to '/sent'
     else
@@ -40,6 +36,10 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
     @message.destroy
     redirect_to '/messages'
+  end
+
+  def message_params
+    params.require(:message).permit(:name, :email, :subject, :message)
   end
 
 end
