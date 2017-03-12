@@ -14,6 +14,8 @@ $(document).ready(function(){
   Materialize.updateTextFields();
 
   $('a').smoothScroll();
+
+  $('.materialboxed').materialbox();
 });
 
 $(window).load(function() {
@@ -28,6 +30,7 @@ $(document).on('scroll',function(){
     } else {
         $('nav').removeClass('small').addClass('large');
         $('.arrowup').addClass('invisible');
+        $('.arrowdown').removeClass('invisible');
     }
 });
 

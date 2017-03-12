@@ -2,12 +2,6 @@ class MessagesController < ApplicationController
 
   before_action :authenticate_admin!, only: [:index, :show, :destroy]
 
-  include MessagesHelper
-
-  def home
-    @message = Message.new
-  end
-
   def index
     @messages = Message.all
   end
