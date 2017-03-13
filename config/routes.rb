@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admins
   
-  root to: "messages#home"
-  get '/' => 'messages#home'
+  root to: "pages#home"
 
-  get '/messages' => 'messages#index'
-  get '/messages/new' => 'messages#new'
-  post '/messages/' => 'messages#create'
-  get '/messages/:id' => 'messages#show'
-  delete '/messages/:id' => 'messages#destroy'
-  
+  resources :messages
   get '/sent' => 'messages#sent'
+
+  get '/colorcrush' => 'pages#colorcrush'
+  get '/jieyisushi' => 'pages#jieyisushi'
+  get '/sparkstart' => 'pages#sparkstart'
 end
