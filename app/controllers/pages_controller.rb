@@ -15,4 +15,7 @@ class PagesController < ApplicationController
   def sparkstart
   end
 
+  def buymenow
+  end
+
 end
