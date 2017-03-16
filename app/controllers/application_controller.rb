@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # def authenticate_admin!
-  #   unless admin_signed_in? && current_admin.superadmin
-  #     redirect_to '/'
-  #   end
-  # end
+  def authenticate_admin!
+    unless admin_signed_in? && current_admin.superadmin
+      redirect_to '/'
+    end
+  end
 
 end

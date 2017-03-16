@@ -57,10 +57,10 @@ if ($(window).width() > 992) {
     {selector: '.project1', offset: 0, callback: function() {
       $('.project1').removeClass('invisible').addClass('animated slideInDown');
     }},
-    {selector: '.project2', offset: 200, callback: function() {
+    {selector: '.project2', offset: 100, callback: function() {
       $('.project2').removeClass('invisible').addClass('animated slideInDown');
     }},
-    {selector: '.project3', offset: 400, callback: function() {
+    {selector: '.project3', offset: 300, callback: function() {
       $('.project3').removeClass('invisible').addClass('animated slideInDown');
     }},
     {selector: '.show-form-header', offset: 0, callback: function() {

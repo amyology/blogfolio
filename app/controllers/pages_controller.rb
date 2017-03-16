@@ -18,4 +18,7 @@ class PagesController < ApplicationController
   def buymenow
   end
 
+  def paramount
+  end
+
 end
