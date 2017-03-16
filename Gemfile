@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'materialize-sass'
 gem 'font-awesome-rails'
-gem 'devise'
+# gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Capistrano for deployment
