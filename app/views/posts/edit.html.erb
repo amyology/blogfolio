@@ -1,0 +1,27 @@
+<div class="page-container">
+  <div class="row">
+    <div class="col l6 m12 s12 offset-l3">
+      <br><br>
+      <div class="headline center">Edit Post</div>
+      <br>
+
+      <div class="center red-text">
+        <% if alert %>
+          <%= alert %>
+          <br><br>
+        <% end %>
+      </div>
+
+      <%= form_for @post do |f| %>
+        <%= f.label :title, class: 'active' %>
+        <%= f.text_field :title, class: 'validate' %>
+
+        <%= f.label :body, class: 'active' %>
+        <%= f.text_area :body, class: 'materialize-textarea validate' %>
+
+        <%= f.submit 'Update', class: 'waves-effect waves-light btn-large' %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

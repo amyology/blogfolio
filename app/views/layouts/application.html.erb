@@ -22,10 +22,10 @@
       <div class="nav-wrapper grey darken-4">
         <a><%= link_to 'a.chan', '/', class: 'brand-logo center white-text' %></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><%= link_to 'About', '#about', class: 'top-link' %></li>
-          <li><%= link_to 'Resume', '#resume', class: 'top-link' %></li>
-          <li><%= link_to 'Portfolio', '#portfolio', class: 'top-link' %></li>
-          <li><%= link_to 'Contact', '#contact', class: 'top-link' %></li>
+          <li><%= link_to 'About', '/#about', class: 'top-link' %></li>
+          <li><%= link_to 'Resume', '/#resume', class: 'top-link' %></li>
+          <li><%= link_to 'Portfolio', '/#portfolio', class: 'top-link' %></li>
+          <li><%= link_to 'Contact', '/#contact', class: 'top-link' %></li>
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if admin_signed_in? %>
@@ -39,15 +39,14 @@
 
   <ul id="slide-out" class="side-nav show">
     <div class="slide-nav">a.chan</div>
-    <div><%= link_to 'About', '#about' %></div>
-    <div><%= link_to 'Resume', '#resume' %></div>
-    <div><%= link_to 'Portfolio', '#portfolio' %></div>
-    <div><%= link_to 'Contact', '#contact' %></div>
+    <div><%= link_to 'About', '/#about' %></div>
+    <div><%= link_to 'Resume', '/#resume' %></div>
+    <div><%= link_to 'Portfolio', '/#portfolio' %></div>
+    <div><%= link_to 'Contact', '/#contact' %></div>
     <% if admin_signed_in? %>
       <div><%= link_to 'Logout', '/admins/sign_out', method: :delete %></div>
     <% end %>
   </ul>
-
 
   <div class="notice"><%= notice %></div>
   <div class="alert"><%= alert %></div>

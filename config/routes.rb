@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   get '/colorcrush' => 'pages#colorcrush'
   get '/jieyisushi' => 'pages#jieyisushi'
   get '/sparkstart' => 'pages#sparkstart'
+  get '/buymenow' => 'pages#buymenow'
+  get '/paramount' => 'pages#paramount'
+
+  resources :posts
+  get '/blog' => 'posts#index'
 end

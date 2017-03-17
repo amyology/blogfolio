@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   include MessagesHelper
 
   def home 
@@ -13,4 +14,11 @@ class PagesController < ApplicationController
 
   def sparkstart
   end
+
+  def buymenow
+  end
+
+  def paramount
+  end
+
 end

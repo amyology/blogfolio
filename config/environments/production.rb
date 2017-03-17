@@ -83,4 +83,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
+  # Sendgrid
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['sendgrid_user_name'],
+    :password => ENV['sendgrid_password'],
+    :domain => 'achan.io',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 end

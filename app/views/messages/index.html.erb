@@ -1,14 +1,18 @@
-<% if admin_signed_in? && current_admin.superadmin? %>
+<div class="page-container">
+  <div class="row">
+    <div class="col l6 m12 s12 offset-l3">
+      <br><br>
+      <div class="headline center">Messages</div>
 
-<h1>Messages</h1>
+      <% @messages.each do |message| %>
+        <p>
+          Name: <%= message.name %><br>
+          Email: <%= message.email %><br>
+          Subject: <%= message.subject %><br>
+          Message: <%= message.message %>
+        </p><br>
+      <% end %>
 
-  <% @messages.each do |message| %>
-    <p>
-      Name: <%= message.name %><br>
-      Email: <%= message.email %><br>
-      Subject: <%= message.subject %><br>
-      Message: <%= message.message %>
-    </p><br>
-  <% end %>
-
-<% end %>
+    </div>
+  </div>
+</div>

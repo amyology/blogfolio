@@ -2,12 +2,6 @@ class MessagesController < ApplicationController
 
   before_action :authenticate_admin!, only: [:index, :show, :destroy]
 
-  include MessagesHelper
-
-  def home
-    @message = Message.new
-  end
-
   def index
     @messages = Message.all
   end
@@ -38,6 +32,8 @@ class MessagesController < ApplicationController
     @message.destroy
     redirect_to '/messages'
   end
+
+  private
 
   def message_params
     params.require(:message).permit(:name, :email, :subject, :message)

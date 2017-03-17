@@ -1,12 +1,11 @@
 <div class="page-container">
   <div class="row">
-    <div class="col l3"></div>
-    <div class="col l6 m12 s12">
+    <div class="col l6 m12 s12 offset-l3">
       <br><br>
       <div class="headline center">Contact Me</div>
       <br>
 
-      <%= form_tag '/messages', method: :post do %>
+      <%= form_for @message do |f| %>
         
         <div class="cyan-text text-darken-1">
           <% if @message.errors[:name].any? %>
@@ -15,8 +14,8 @@
         </div>
         <div class="input-field">
           <i class="material-icons prefix">perm_identity</i>
-          <%= label_tag :name, nil, class: 'active' %>
-          <%= text_field_tag :name, @message.name, class: 'validate' %><br>
+          <%= f.label :name, class: 'active' %>
+          <%= f.text_field :name, class: 'validate' %><br>
         </div>
 
         <div class="cyan-text text-darken-1">
@@ -26,8 +25,8 @@
         </div>
         <div class="input-field">
           <i class="material-icons prefix">email</i>
-          <%= label_tag :email, nil, class: 'active' %>
-          <%= text_field_tag :email, @message.email, class: 'validate' %><br>
+          <%= f.label :email, class: 'active' %>
+          <%= f.text_field :email, class: 'validate' %><br>
         </div>
 
         <div class="cyan-text text-darken-1">
@@ -37,8 +36,8 @@
         </div>
         <div class="input-field">
           <i class="material-icons prefix">subject</i>
-          <%= label_tag :subject, nil, class: 'active' %>
-          <%= text_field_tag :subject, @message.subject, class: 'validate' %><br>
+          <%= f.label :subject, class: 'active' %>
+          <%= f.text_field :subject, class: 'validate' %><br>
         </div>
 
         <div class="cyan-text text-darken-1">
@@ -48,8 +47,8 @@
         </div>
         <div class="input-field">
           <i class="material-icons prefix">mode_edit</i>
-          <%= label_tag :message, nil, class: 'active' %>
-          <%= text_area_tag :message, @message.message, class: 'materialize-textarea validate' %><br>
+          <%= f.label :message, class: 'active' %>
+          <%= f.text_area :message, class: 'materialize-textarea validate' %><br>
         </div>
         
         <br>
@@ -61,6 +60,5 @@
       <% end %>
 
     </div>
-    <div class="col l3"></div>
   </div>
 </div>

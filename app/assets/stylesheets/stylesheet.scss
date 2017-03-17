@@ -2,6 +2,7 @@
 
 $dark-gray: #212121;
 $light-gray: #9E9E9E;
+$accent-color: #00b8d4;
 
 @mixin link-active {
   color: #FFF;
@@ -190,4 +191,14 @@ nav ul a.active {
 .arrowup:hover {
   @include slow-transition;
   opacity: 0.8;
+}
+
+::selection {
+  background: $accent-color;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: $accent-color;
+  color: #fff;
 }

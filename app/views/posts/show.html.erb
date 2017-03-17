@@ -1,0 +1,22 @@
+<div class="page-container">
+  <div class="row">
+    <div class="col l6 m12 s12 offset-l3">
+      <p><a href="/blog">< Back to blog</a></p>
+
+      <div class="center green-text">
+        <% if notice %>
+          <%= notice %>
+          <br><br>
+        <% end %>
+      </div>
+
+      <p class="headline center"><%= @post.title %></p>
+
+      <p><%= sanitize(@post.body) %></p>
+
+      <br>
+      <p><a href="/posts/<%= @post.id %>/edit">Edit Post</a></p>
+
+    </div>
+  </div>
+</div>
