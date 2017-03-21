@@ -13,9 +13,30 @@
       <p class="headline center"><%= @post.title %></p>
 
       <p><%= sanitize(@post.body) %></p>
-
       <br>
-      <p><a href="/posts/<%= @post.id %>/edit">Edit Post</a></p>
+
+      <% if @category_list.length > 0 %>
+        <p>
+          <b>Categories:</b>
+          <% @category_list.each do |category| %>
+            <%= link_to category, "/blog/?category_search=#{category}" %><% if @category_list.index(category) < @category_list.length - 1 %>,<% end %>
+          <% end %>
+        </p>
+      <% end %>
+
+      <% if @tag_list.length > 0 %>
+        <p>
+          <b>Tags:</b>
+          <% @tag_list.each do |tag| %>
+            <%= link_to tag, "/blog/?tag_search=#{tag}" %><% if @tag_list.index(tag) < @tag_list.length - 1 %>,<% end %>
+          <% end %>
+        </p>
+      <% end %>
+
+      <% if current_admin.superadmin %>
+        <br>
+        <p><a href="/posts/<%= @post.id %>/edit" class="waves-effect waves-light btn">Edit Post</a></p>
+      <% end %>
 
     </div>
   </div>

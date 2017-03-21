@@ -1,0 +1,55 @@
+<div class="page-container">
+  <div class="row">
+    <div class="col l6 m12 s12 offset-l3">
+
+      <div class="row">
+        <div class="col l11 m11 s11">
+          <%= form_tag "/blog", method: :get do %>
+            <%= text_field_tag :search, nil, placeholder: "Search blog" %>
+        </div>
+        <div class="col l1 m1 s1">
+            <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-flat', style: 'padding: 0') do %><i class="material-icons right">send &nbsp; </i><% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <h4 class="center">View All Posts</h4>
+      <br>
+
+      <% if @posts.count > 0 %>
+        <% @posts.each do |post| %>
+          <p>
+            <%= post.created_at.strftime("%m/%d/%Y") %>:
+            <a href="/posts/<%= post.id %>"><%= post.title %></a>
+          </p>
+        <% end %>
+      <% else %>
+        <p>There are no posts yet.</p>
+      <% end %>
+
+      <br><hr><br>
+
+      <h4 class="center">View All Categories</h4>
+      
+      <br>
+      <div class="center">
+        <% @categories.each do |category| %>
+          <%= link_to category, "/blog/?category_search=#{category}" %>
+        <% end %>
+      </div>
+      <br>
+
+      <br><hr><br>
+
+      <h4 class="center">View All Tags</h4>
+      
+      <br>
+      <div class="center">
+        <% @tags.each do |tag| %>
+          <%= link_to tag, "/blog/?tag_search=#{tag}" %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

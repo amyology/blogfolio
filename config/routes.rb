@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   resources :posts
   get '/blog' => 'posts#index'
+  get '/blog/archive' => 'posts#archive'
 end

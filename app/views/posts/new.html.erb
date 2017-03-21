@@ -1,14 +1,14 @@
 <div class="page-container">
   <div class="row">
     <div class="col l6 m12 s12 offset-l3">
-      <br><br>
+      <br>
       <div class="headline center">New Post</div>
       <br>
 
       <div class="center red-text">
         <% if alert %>
-          <%= alert %>
-          <br><br>
+          <p><%= alert %></p>
+          <br>
         <% end %>
       </div>
 
@@ -19,7 +19,13 @@
         <%= f.label :body, class: 'active' %>
         <%= f.text_area :body, class: 'materialize-textarea validate' %>
 
-        <%= f.submit 'Post', class: 'waves-effect waves-light btn-large' %>
+        <%= label_tag :categories, nil, class: 'active' %>
+        <%= text_field_tag :category_string %>
+
+        <%= label_tag :tags, nil, class: 'active' %>
+        <%= text_field_tag :tag_string %>
+
+        <%= f.submit 'Post', class: 'waves-effect waves-light btn' %>
       <% end %>
 
     </div>

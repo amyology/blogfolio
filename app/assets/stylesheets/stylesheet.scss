@@ -202,3 +202,12 @@ nav ul a.active {
   background: $accent-color;
   color: #fff;
 }
+
+code {
+  font-size: 0.9rem !important;
+}
+
+hr {
+  border: 0 !important;
+  border-bottom: 1px dotted $accent-color !important;
+}

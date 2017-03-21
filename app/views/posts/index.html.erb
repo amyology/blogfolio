@@ -1,35 +1,75 @@
 <div class="page-container">
   <div class="row">
     <div class="col l6 m12 s12 offset-l3">
-      <br>
-      <h4 class="center">Blog</h4>
-      
       <div class="center green-text">
         <% if notice %>
           <%= notice %>
           <br><br>
         <% end %>
       </div>
+      
+      <div class="row">
+        <div class="col l7 m6 s12" style="padding: 0">
+          <h4>Blog</h4>
+          <% if current_admin.superadmin %>
+            <p><a href="/posts/new">New Post</a></p>
+          <% end %>
+        </div>
+        <div class="col l4 m5 s10" style="padding: 0">
+          <%= form_tag "/blog", method: :get do %>
+            <%= text_field_tag :search, nil, placeholder: "Search blog" %>
+        </div>
+        <div class="col l1 m1 s2">
+            <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-flat', style: 'padding: 0') do %><i class="material-icons right">send &nbsp; </i><% end %>
+          <% end %>
+        </div>
+      </div>
 
-      <% if @posts.count > 0 %>
-        <% @posts.each do |post| %>
-          <p>
-            <a href="/posts/<%= post.id %>" class="headline"><%= post.title %></a>
+
+      <% if !@searched %>
+        <% if @posts.count > 0 %>
+          <% @posts.each do |post| %>
             <br>
-            <i><%= post.created_at.strftime("%m/%d/%Y") %></i>
-          </p>
-
-          <p>
-            <%= sanitize(post.body).first(550) %>
-            <% if post.body.length > 550 %>
-              ... <a href="/posts/<%= post.id %>">Read more</a>
+            <p>
+              <a href="/posts/<%= post.id %>" class="headline"><%= post.title %></a>
+              <br>
+              <i><%= post.created_at.strftime("%B %e, %Y") %></i>
+            </p>
+            <p>
+              <%= sanitize(post.body.first(450)) %>
+              <% if post.body.length > 450 %>
+                ... <a href="/posts/<%= post.id %>">Read more</a>
+              <% end %>
+            </p>
+            <br>
+            <% if @posts.index(post) < @posts.length - 1 %>
+              <hr>
             <% end %>
-          </p>
-          <hr>
+          <% end %>
+        <% else %>
+          <p>There are no posts yet.</p>
         <% end %>
       <% else %>
-        <br>
-        There are no posts yet.
+        <% if @searched.length > 0 %>
+          <% @searched.each do |post| %>
+            <br>
+            <p>
+              <a href="/posts/<%= post.id %>" class="headline"><%= post.title %></a>
+              <br>
+              <i><%= post.created_at.strftime("%B %e, %Y") %></i>
+            </p>
+            <p>
+              <%= sanitize(post.body.first(450)) %>
+              <% if post.body.length > 450 %>
+                ... <a href="/posts/<%= post.id %>">Read more</a>
+              <% end %>
+            </p>
+            <br>
+            <hr>
+          <% end %>
+        <% else %>
+          <p>No results.</p>
+        <% end %>
       <% end %>
 
     </div>
