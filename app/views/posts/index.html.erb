@@ -33,11 +33,30 @@
               <a href="/posts/<%= post.id %>" class="headline"><%= post.title %></a>
               <br>
               <i><%= post.created_at.strftime("%B %e, %Y") %></i>
+              <br>
             </p>
             <p>
               <%= sanitize(post.body.first(450)) %>
               <% if post.body.length > 450 %>
                 ... <a href="/posts/<%= post.id %>">Read more</a>
+              <% end %>
+            </p>
+            <p>
+              <% category_list = post.categories.collect { |category| category.category_name } %>
+              <% if category_list.length > 0 %>
+                Categories: 
+                <% category_list.each do |category| %>
+                  <%= link_to category, "/blog/?category_search=#{category}" %><% if category_list.index(category) < category_list.length - 1 %>,<% end %>
+                <% end %>
+              <% end %>
+
+              <% tag_list = post.tags.collect { |tag| tag.tag_name } %>
+              <% if tag_list.length > 0 %>
+                Tags: 
+                <% tag_list.each do |tag| %>
+                  <%= link_to tag, "/blog/?tag_search=#{tag}" %><% if tag_list.index(tag) < tag_list.length - 1 %>,<% end %>
+                <% end %>
+                <br>
               <% end %>
             </p>
             <br>
