@@ -26,7 +26,7 @@
     <div class="row">
       <div class="col l3 m2 s12"></div>
       <div class="col l6 m8 s12"> <br>
-        <div class="headline show-name invisible scenter-align">Hi! My name is Amy Chan.</div> <br>
+        <div class="headline show-name invisible center-align">Hi! My name is Amy Chan.</div> <br>
         <%= image_tag 'me.png', class: 'circle responsive-img circle-text show-pic invisible', alt: 'this is me' %>
         <div class="show-bio invisible"> <br>
           I am a full-stack developer based in Chicago. I am a web developer/designer at heart who took a brief detour to go to law school, learned some valuable skills while I was there, and am now back to doing what I love.
@@ -57,7 +57,7 @@
     <div class="headline center-align show-skills invisible">Skills</div> <br>
     <div class="row">
       <div class="col l3"></div>
-      <div class="col s12 m12 l6 center-align">
+      <div class="col s12 m12 l6">
         <ul class="show-list invisible">
         <% skills.each do |skill| %>
           <div class="col s6 m4 l3"><li><%= skill %></li></div>
@@ -89,25 +89,46 @@
       <div class="col s12 m4 l4">
         <div class="icon-block project1 invisible center-align"> <br>
           <div class="headline">ColorCrush</div>
-          <p><%= image_tag 'colorcrush-thumb.png', class: 'responsive-img thumb' %></p>
+          <p><a href="/colorcrush" class="thumb"><%= image_tag 'colorcrush-thumb.png', class: 'responsive-img' %></a></p>
           <p>
-            <%= link_to 'Live Demo', 'http://color-crush.herokuapp.com', target: 'new' %> |
-            <%= link_to 'Repository', 'https://github.com/amyology/colorcrush', target: 'new' %>
+            <%= link_to 'Demo', 'http://color-crush.herokuapp.com', target: 'new' %> |
+            <%= link_to 'Repo', 'https://github.com/amyology/colorcrush', target: 'new' %>
           </p>
         </div>
       </div>
 
       <div class="col s12 m4 l4">
-        <div class="icon-block project2 invisible center-align">
-
+        <div class="icon-block project2 invisible center-align"> <br>
+          <div class="headline">Spark Start</div>
+          <p><a href="/sparkstart" class="thumb"><%= image_tag 'sparkstart-thumb.png', class: 'responsive-img' %></a></p>
+          <p><%= link_to 'Demo', 'http://prod-spark-start.herokuapp.com', target: 'new' %></p>
         </div>
       </div>
 
       <div class="col s12 m4 l4">
-        <div class="icon-block project3 invisible center-align">
-
+        <div class="icon-block project3 invisible center-align"> <br>
+          <div class="headline">Jieyi Sushi</div>
+          <p><a href="/jieyisushi" class="thumb"><%= image_tag 'jieyisushi-thumb.png', class: 'responsive-img' %></a></p>
+          <p><%= link_to 'Visit', 'http://jieyisushi.com', target: 'new' %></p>
         </div>
       </div>
+
+      <div class="col s12 m4 l4">
+        <div class="icon-block project4 invisible center-align"> <br>
+          <div class="headline">Analytics Dashboard</div>
+          <p><a href="/buymenow" class="thumb"><%= image_tag 'analytics-thumb.png', class: 'responsive-img' %></a></p>
+          <p><%= link_to 'Demo', 'http://tde-analytics.herokuapp.com', target: 'new' %></p>
+        </div>
+      </div>
+
+      <div class="col s12 m4 l4">
+        <div class="icon-block project5 invisible center-align"> <br>
+          <div class="headline">Paramount of Oak Park</div>
+          <p><a href="/paramount" class="thumb"><%= image_tag 'paramount-thumb.png', class: 'responsive-img' %></a></p>
+          <p><%= link_to 'Visit', 'http://www.paramountoakpark.com', target: 'new' %></p>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -131,33 +152,33 @@
       <div class="headline show-form-header invisible">Contact Me</div>
       <br>
       <div class="show-form invisible">
-      <%= form_tag '/messages', method: :post do %>
+      <%= form_for @message do |f| %>
         
         <div class="input-field">
           <i class="material-icons prefix">perm_identity</i>
-          <%= label_tag :name %>
-          <%= text_field_tag :name, nil, class: 'validate' %><br>
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'validate' %><br>
         </div>
 
         <div class="input-field">
           <i class="material-icons prefix">email</i>
-          <%= label_tag :email %>
-          <%= text_field_tag :email, nil, class: 'validate' %><br>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'validate' %><br>
         </div>
 
         <div class="input-field">
           <i class="material-icons prefix">subject</i>
-          <%= label_tag :subject %>
-          <%= text_field_tag :subject, nil, class: 'validate' %><br>
+          <%= f.label :subject %>
+          <%= f.text_field :subject, class: 'validate' %><br>
         </div>
 
         <div class="input-field">
           <i class="material-icons prefix">mode_edit</i>
-          <%= label_tag :message %>
-          <%= text_area_tag :message, nil, class: 'materialize-textarea validate' %><br>
+          <%= f.label :message %>
+          <%= f.text_area :message, class: 'materialize-textarea validate' %><br>
         </div>
         
-        <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
+        <%= f.button(type: 'submit', class: 'waves-effect waves-light btn-large') do %> 
           Send <i class="material-icons right">send</i>
         <% end %>
       <% end %><br>

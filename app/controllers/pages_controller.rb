@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  include MessagesHelper
+  include PagesHelper
 
   def home 
     @message = Message.new

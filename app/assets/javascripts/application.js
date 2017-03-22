@@ -15,6 +15,4 @@
 //= require jquery.smooth-scroll.min
 //= require materialize
 //= require prism
-//= require_tree .
-//= require_self
 //= require_tree ./v2

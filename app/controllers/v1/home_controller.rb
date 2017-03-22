@@ -1,8 +1,9 @@
 class V1::HomeController < ApplicationController
 
-  include HomeHelper
+  include PagesHelper
 
   def index
+    @message = Message.new
   end
 
 end
