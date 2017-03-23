@@ -16,6 +16,10 @@ $(document).ready(function(){
   $('a').smoothScroll();
 
   $('.materialboxed').materialbox();
+
+  $('#info-toggle').click(function(){
+    $('#blog-tips').toggle();
+  });
 });
 
 $(window).load(function() {

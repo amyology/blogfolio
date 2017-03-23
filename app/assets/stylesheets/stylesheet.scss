@@ -141,6 +141,10 @@ nav ul a.active {
   visibility: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .thumb {
   opacity: 0.5;
   @include slow-transition;

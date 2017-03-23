@@ -15,6 +15,12 @@
       <%= form_for @post do |f| %>
         <%= f.label :title, class: 'active' %>
         <%= f.text_field :title, class: 'validate' %>
+        
+        <a id="info-toggle"><i class="material-icons">info_outline</i></a><br>
+        <div id="blog-tips" class="hidden">
+          <pre><code class="language-html">&lt;pre>&lt;code class="language-ruby"> insert code here &lt;/code>&lt;/pre></code></pre>
+          <pre><code class="language-html">Use &amp;lt; (&lt;) to escape html tags</code></pre><br>
+        </div>
 
         <%= f.label :body, class: 'active' %>
         <%= f.text_area :body, class: 'materialize-textarea validate' %>
