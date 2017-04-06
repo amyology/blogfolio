@@ -29,6 +29,7 @@ gem 'materialize-sass'
 gem 'font-awesome-rails'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
+gem 'invisible_captcha'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

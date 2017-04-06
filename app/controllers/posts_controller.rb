@@ -16,8 +16,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
     @category_list = @post.categories.collect { |category| category.category_name }
     @tag_list = @post.tags.collect { |tag| tag.tag_name }
+    @approved_comments = @post.comments.where(approved: true)
   end
 
   def archive
