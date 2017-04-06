@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
+      AppMailer.comment_email(@comment).deliver_now
       flash[:notice] = "Thanks! Your comment is awaiting approval."
       redirect_to request.referer
     else
