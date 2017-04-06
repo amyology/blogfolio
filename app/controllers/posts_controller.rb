@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @category_list = @post.categories.collect { |category| category.category_name }
     @tag_list = @post.tags.collect { |tag| tag.tag_name }
-    @approved_comments = @post.comments.where(approved: true)
+    @approved_comments = @post.comments.where(approved: true).order(id: :asc)
   end
 
   def archive

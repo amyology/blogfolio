@@ -15,8 +15,8 @@
 
       <p class="headline center"><%= @post.title %></p>
 
-      <p><%= sanitize(@post.body) %></p>
-      <br>
+      <%= sanitize(@post.body) %>
+      <br><br>
 
       <% if @category_list.length > 0 %>
           <b>Categories:</b>
@@ -36,7 +36,7 @@
 
       <% if admin_signed_in? && current_admin.superadmin %>
         <br>
-        <p><a href="/posts/<%= @post.id %>/edit" class="waves-effect waves-light btn">Edit Post</a></p>
+        <a href="/posts/<%= @post.id %>/edit" class="waves-effect waves-light btn">Edit Post</a><br>
       <% end %>
       <br>
 
@@ -51,7 +51,6 @@
           <span class="lighter-text">Comment:</span> <%= comment.body %><br><br>
         <% end %>
       <% end %>
-      <br>
 
       <p class="headline">Leave a comment</p>
 
