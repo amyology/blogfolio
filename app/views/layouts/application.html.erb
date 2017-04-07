@@ -29,7 +29,14 @@
   <div id="scrolltop"></div>
   <div class="loader"></div>
 
+
   <div class="navbar-fixed">
+    <ul id="dropdown" class="dropdown-content">
+      <li><%= link_to 'New Blog Post', '/posts/new', class: 'top-link' %></li>
+      <li><%= link_to "#{pluralize(Comment.where(approved: false).length, 'New Comment')}", '/comments', class: 'top-link' %></li>
+      <li><%= link_to 'Logout', '/admins/sign_out', method: :delete, class: 'top-link' %></li>
+    </ul>
+
     <nav class="large">
       <div class="nav-wrapper grey darken-4">
         <a><%= link_to 'a.chan', '/', class: 'brand-logo center white-text' %></a>
@@ -42,25 +49,25 @@
         </ul>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if admin_signed_in? %>
-            <li><%= link_to 'Logout', '/admins/sign_out', method: :delete, class: 'top-link' %></li>
+            <li><a class="dropdown-button top-link" href="#!" data-activates="dropdown">Admin Options<i class="material-icons right">arrow_drop_down</i></a></li>
           <% end %>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons hide-on-large-and-up cyan-text text-accent-4">menu</i></a>
       </div>
     </nav>
-  </div>
 
-  <ul id="slide-out" class="side-nav show">
-    <div class="slide-nav">a.chan</div>
-    <div><%= link_to 'About', '/#about' %></div>
-    <div><%= link_to 'Resume', '/#resume' %></div>
-    <div><%= link_to 'Portfolio', '/#portfolio' %></div>
-    <div><%= link_to 'Contact', '/#contact' %></div>
-    <div><%= link_to 'Blog', '/blog' %></div>
-    <% if admin_signed_in? %>
-      <div><%= link_to 'Logout', '/admins/sign_out', method: :delete %></div>
-    <% end %>
-  </ul>
+    <ul id="slide-out" class="side-nav show">
+      <div class="slide-nav">a.chan</div>
+      <div><%= link_to 'About', '/#about' %></div>
+      <div><%= link_to 'Resume', '/#resume' %></div>
+      <div><%= link_to 'Portfolio', '/#portfolio' %></div>
+      <div><%= link_to 'Contact', '/#contact' %></div>
+      <div><%= link_to 'Blog', '/blog' %></div>
+      <% if admin_signed_in? %>
+        <div><%= link_to 'Logout', '/admins/sign_out', method: :delete %></div>
+      <% end %>
+    </ul>
+  </div>
 
   <div class="notice"><%= notice %></div>
   <div class="alert"><%= alert %></div>
