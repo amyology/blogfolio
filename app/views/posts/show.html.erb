@@ -15,30 +15,77 @@
 
       <p class="headline center"><%= @post.title %></p>
 
-      <p><%= sanitize(@post.body) %></p>
-      <br>
+      <%= sanitize(@post.body) %>
+      <br><br>
 
       <% if @category_list.length > 0 %>
-        <p>
           <b>Categories:</b>
           <% @category_list.each do |category| %>
             <%= link_to category, "/blog/?category_search=#{category}" %><% if @category_list.index(category) < @category_list.length - 1 %>,<% end %>
           <% end %>
-        </p>
       <% end %>
+      <br>
 
       <% if @tag_list.length > 0 %>
-        <p>
           <b>Tags:</b>
           <% @tag_list.each do |tag| %>
             <%= link_to tag, "/blog/?tag_search=#{tag}" %><% if @tag_list.index(tag) < @tag_list.length - 1 %>,<% end %>
           <% end %>
-        </p>
       <% end %>
+      <br>
 
       <% if admin_signed_in? && current_admin.superadmin %>
         <br>
-        <p><a href="/posts/<%= @post.id %>/edit" class="waves-effect waves-light btn">Edit Post</a></p>
+        <a href="/posts/<%= @post.id %>/edit" class="waves-effect waves-light btn">Edit Post</a><br>
+      <% end %>
+      <br>
+
+      <% if @approved_comments.size > 0 %>
+        <p class="headline">Comments (<%= @approved_comments.size %>)</p>
+
+        <% @approved_comments.each do |comment| %>
+          <span class="lighter-text">Name:</span> <%= comment.commenter %><br>
+          <% if comment.url %>
+            <span class="lighter-text">Website/Blog:</span> <a href="<%= comment.url %>"><%= comment.url %></a><br>
+          <% end %>
+          <span class="lighter-text">Comment:</span> <%= comment.body %><br><br>
+        <% end %>
+      <% end %>
+
+      <p class="headline">Leave a comment</p>
+
+      <div class="red-text">
+        <% if alert %>
+          <p><%= alert %></p>
+        <% end %>
+      </div>
+
+      <%= form_for @comment do |f| %>
+        <%= f.invisible_captcha :subtitle %>
+        
+        <div class="input-field">
+          <%= f.label :commenter, "Name (required)", class: 'active' %>
+          <%= f.text_field :commenter, class: 'validate' %>
+        </div>
+        
+        <div class="input-field">
+          <%= f.label :email, "Email (required, will not be published)", class: 'active' %>
+          <%= f.email_field :email, class: 'validate' %>
+        </div>
+
+        <div class="input-field">
+          <%= f.label :url, "Website or blog (optional)", class: 'active' %>
+          <%= f.text_field :url, class: 'validate' %>
+        </div>
+
+        <div class="input-field">
+          <%= f.label :body, "Comment (required)", class: 'active' %>
+          <%= f.text_area :body, class: 'materialize-textarea validate' %>
+        </div>
+        
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit 'Submit', class: 'waves-effect waves-light btn' %>
+
       <% end %>
 
     </div>

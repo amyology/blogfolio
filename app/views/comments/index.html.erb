@@ -1,0 +1,23 @@
+<div class="page-container">
+  <% @comments.each do |comment| %>
+    <a href="mailto: <%= comment.email %>"><%= comment.commenter %></a> <% if comment.url.present? %>| <i><a href="<%= comment.url %>" target="new"><%= comment.url %></a></i><% end %> on <a href="/posts/<%= comment.post_id %>">Post <%= comment.post_id %></a><br>
+    <%= comment.body %>
+    <div class="row">
+      <%= form_for comment do |f| %>
+        <div class="col s4 m4 l1">
+          <%= f.text_field :approved %>
+          <%= f.invisible_captcha :subtitle %>
+        </div>
+        <div class="col s4 m4 l1">
+          <%= f.submit 'Save', class: 'waves-effect waves-light btn green' %>
+        </div>
+      <% end %>
+      <%= form_for comment, method: :delete do |f| %>
+        <div class="col s4 m4 l1">
+          <%= f.submit 'Delete', class: 'waves-effect waves-light btn red' %>
+        </div>
+      <% end %>
+    </div>
+    <br>
+  <% end %>
+</div>
