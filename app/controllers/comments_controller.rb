@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_admin!, only: [:index, :create, :update, :destroy]
   invisible_captcha only: [:create, :update], honeypot: :subtitle
 
   def index
