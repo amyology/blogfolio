@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   get '/buymenow' => 'pages#buymenow'
   get '/paramount' => 'pages#paramount'
 
-  resources :posts, except: [:show, :edit]
+  resources :posts
   get '/blog' => 'posts#index'
   get '/blog/archive' => 'posts#archive'
 
-  resources :comments
+  resources :comments, except: [:show, :edit]
 end
