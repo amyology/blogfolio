@@ -1,5 +1,9 @@
 class CommentsController < ApplicationController
-  invisible_captcha only: [:create], honeypot: :subtitle
+  invisible_captcha only: [:create, :update], honeypot: :subtitle
+
+  def index
+    @comments = Comment.all.order(id: :desc)
+  end
 
   def create
     @comment = Comment.new(comment_params)
@@ -14,16 +18,22 @@ class CommentsController < ApplicationController
     end
   end
 
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update(comment_params)
+    redirect_to '/comments'
+  end
+
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to "/blog"
+    redirect_to "/comments"
   end
 
   private
 
   def comment_params
-    params.require(:comment).permit(:commenter, :email, :body, :url, :post_id)
+    params.require(:comment).permit(:commenter, :email, :body, :url, :post_id, :approved)
   end
 
 end

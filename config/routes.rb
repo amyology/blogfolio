@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   root to: "pages#home"
 
-  resources :messages
+  resources :messages, except: [:edit, :update]
   get '/sent' => 'messages#sent'
 
   get '/colorcrush' => 'pages#colorcrush'
@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   get '/blog' => 'posts#index'
   get '/blog/archive' => 'posts#archive'
 
-  resources :comments, only: [:create, :destroy]
+  resources :comments
 end
