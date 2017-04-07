@@ -26,10 +26,10 @@
         <%= f.text_area :body, class: 'materialize-textarea validate' %>
 
         <%= label_tag :categories, nil, class: 'active' %>
-        <%= f.text_field :category_string %>
+        <%= text_field_tag :category_string %>
 
         <%= label_tag :tags, nil, class: 'active' %>
-        <%= f.text_field :tag_string %>
+        <%= text_field_tag :tag_string %>
 
         <%= f.submit 'Post', class: 'waves-effect waves-light btn' %>
       <% end %>
