@@ -45,7 +45,7 @@
 
         <% @approved_comments.each do |comment| %>
           <span class="lighter-text">Name:</span> <%= comment.commenter %><br>
-          <% if comment.url %>
+          <% if comment.url.present? %>
             <span class="lighter-text">Website/Blog:</span> <a href="<%= comment.url %>"><%= comment.url %></a><br>
           <% end %>
           <span class="lighter-text">Comment:</span> <%= comment.body %><br><br>
