@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    posts = Post.all
-    @posts = Post.all.order(:created_at).reverse.take(10)
+    # posts = Post.where(published: true)
+    @posts = Post.where(published: true).order(:created_at).reverse.take(10)
 
     @search = params[:search]
     @tag_search = params[:tag_search]

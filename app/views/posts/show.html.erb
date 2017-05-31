@@ -16,7 +16,7 @@
       <p class="headline center"><%= @post.title %></p>
 
       <%= sanitize(@post.body) %>
-      <br><br>
+      <br>
 
       <% if @category_list.length > 0 %>
           <b>Categories:</b>
@@ -35,7 +35,7 @@
       <br>
 
       <% if admin_signed_in? && current_admin.superadmin %>
-        <br>
+        <br><br>
         <a href="/posts/<%= @post.id %>/edit" class="waves-effect waves-light btn">Edit Post</a><br>
       <% end %>
       <br>
