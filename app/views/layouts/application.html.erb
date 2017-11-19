@@ -55,19 +55,19 @@
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons hide-on-large-and-up cyan-text text-accent-4">menu</i></a>
       </div>
     </nav>
-
-    <ul id="slide-out" class="side-nav show">
-      <div class="slide-nav">a.chan</div>
-      <div><%= link_to 'About', '/#about' %></div>
-      <div><%= link_to 'Resume', '/#resume' %></div>
-      <div><%= link_to 'Portfolio', '/#portfolio' %></div>
-      <div><%= link_to 'Contact', '/#contact' %></div>
-      <div><%= link_to 'Blog', '/blog' %></div>
-      <% if admin_signed_in? %>
-        <div><%= link_to 'Logout', '/admins/sign_out', method: :delete %></div>
-      <% end %>
-    </ul>
   </div>
+
+  <ul id="slide-out" class="side-nav show">
+    <div class="slide-nav">a.chan</div>
+    <div><%= link_to 'About', '/#about' %></div>
+    <div><%= link_to 'Resume', '/#resume' %></div>
+    <div><%= link_to 'Portfolio', '/#portfolio' %></div>
+    <div><%= link_to 'Contact', '/#contact' %></div>
+    <div><%= link_to 'Blog', '/blog' %></div>
+    <% if admin_signed_in? %>
+      <div><%= link_to 'Logout', '/admins/sign_out', method: :delete %></div>
+    <% end %>
+  </ul>
 
   <div class="notice"><%= notice %></div>
   <div class="alert"><%= alert %></div>

@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 $(window).load(function() {
   $(".loader").fadeOut("slow");
-})
+});
 
 $(document).on('scroll',function(){
     if ($(document).scrollTop() > 100) {
@@ -116,6 +116,12 @@ if ($(window).width() < 992) {
     }},
     {selector: '.project3', offset: 400, callback: function() {
       $('.project3').removeClass('invisible').addClass('animated slideInDown');
+    }},
+    {selector: '.project4', offset: 300, callback: function() {
+      $('.project4').removeClass('invisible').addClass('animated slideInDown');
+    }},
+    {selector: '.project5', offset: 400, callback: function() {
+      $('.project5').removeClass('invisible').addClass('animated slideInDown');
     }},
     {selector: '.show-form-header', offset: 0, callback: function() {
       $('.show-form-header').removeClass('invisible').addClass('animated slideInDown');
