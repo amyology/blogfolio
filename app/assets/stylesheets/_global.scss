@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+  font-family: 'Inconsolata', monospace; 
+  font-size: 1.1em;
+}
+
+::selection {
+  background: $accent-color;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: $accent-color;
+  color: #fff;
+}

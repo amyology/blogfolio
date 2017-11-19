@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_admin!
     unless admin_signed_in? && current_admin.superadmin
-      redirect_to '/'
+      redirect_to '/blog'
     end
   end
 

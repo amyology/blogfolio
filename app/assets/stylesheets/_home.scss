@@ -1,26 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-
-$dark-gray: #212121;
-$light-gray: #9E9E9E;
-$accent-color: #00b8d4;
-
-@mixin link-active {
-  color: #FFF;
-  background-color: rgba(255,255,255,0.05)
-}
-
-@mixin slow-transition {
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
-
-body {
-  font-family: 'Inconsolata', monospace; 
-  font-size: 1.1em;
-}
-
 main a:hover {
   opacity: 0.5;
   @include slow-transition;
@@ -28,11 +5,6 @@ main a:hover {
 
 main a:not(:hover) {
   @include slow-transition;
-}
-
-.headline {
-  font-size: 1.4em;
-  font-weight: bold;
 }
 
 .content-section {
@@ -197,25 +169,7 @@ nav ul a.active {
   opacity: 0.8;
 }
 
-::selection {
-  background: $accent-color;
-  color: #fff;
-}
-
-::-moz-selection {
-  background: $accent-color;
-  color: #fff;
-}
-
-code {
-  font-size: 0.9rem !important;
-}
-
 hr {
   border: 0 !important;
   border-bottom: 1px dotted $accent-color !important;
-}
-
-.lighter-text {
-  color: $light-gray;
 }

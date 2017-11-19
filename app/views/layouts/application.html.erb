@@ -33,6 +33,7 @@
   <div class="navbar-fixed">
     <ul id="dropdown" class="dropdown-content">
       <li><%= link_to 'New Blog Post', '/posts/new', class: 'top-link' %></li>
+      <li><%= link_to 'View Drafts', '/blog/drafts', class: 'top-link' %></li>
       <li><%= link_to "#{pluralize(Comment.where(approved: false).length, 'New Comment')}", '/comments', class: 'top-link' %></li>
       <li><%= link_to 'Logout', '/admins/sign_out', method: :delete, class: 'top-link' %></li>
     </ul>

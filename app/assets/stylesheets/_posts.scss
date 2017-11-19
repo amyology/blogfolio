@@ -1,0 +1,38 @@
+.blog-post {
+  img {
+    width: 100%;
+  }
+  .headline {
+    margin: 3rem 0 2rem;
+  }
+}
+
+.post-body {
+  margin: 1rem 0;
+}
+
+code {
+  font-size: 0.9rem !important;
+}
+
+.comment-form {
+  background: $lightest-gray;
+  padding: 1rem;
+}
+
+.tag-box,
+.edit-link {
+  margin: 0 0 3rem;
+}
+
+.category-box {
+  margin: 2rem 0 0;
+}
+
+.comment {
+  margin: 1rem 0;
+  padding: 1rem;
+  &:nth-of-type(odd) {
+    background-color: $lightest-gray;
+  }
+}
