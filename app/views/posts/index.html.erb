@@ -95,7 +95,9 @@
         <% end %>
       <% end %>
       
-      <p class="right"><%= link_to 'See all posts >', "/blog/archive" %></p>
+      <% if @posts.count > 0 %>
+          <p class="right"><%= link_to 'See all posts >', "/blog/archive" %></p>
+      <% end %>
 
     </div>
   </div>
