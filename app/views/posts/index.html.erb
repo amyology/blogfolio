@@ -21,11 +21,13 @@
           <% end %>
         </div>
         <div class="col l4 m5 s10" style="padding: 0">
-          <%= form_tag "/blog", method: :get do %>
-            <%= text_field_tag :search, nil, placeholder: "Search blog" %>
+          <% if @posts.count > 0 %>
+            <%= form_tag "/blog", method: :get do %>
+              <%= text_field_tag :search, nil, placeholder: "Search blog" %>
         </div>
         <div class="col l1 m1 s2">
-            <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-flat', style: 'padding: 0') do %><i class="material-icons right">send &nbsp; </i><% end %>
+              <%= button_tag(type: 'submit', class: 'waves-effect waves-light btn-flat', style: 'padding: 0') do %><i class="material-icons right">send &nbsp; </i><% end %>
+            <% end %>
           <% end %>
         </div>
       </div>
