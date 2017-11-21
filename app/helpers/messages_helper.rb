@@ -5,9 +5,12 @@ module MessagesHelper
       'Ruby',
       'Rails',
       'Javascript',
-      'jQuery',
+      'Node.js',
+      'Express.js',
       'AngularJS',
       'Vue.js',
+      'jQuery',
+      'Salesforce Commerce Cloud',
       'C#',
       'HTML',
       'CSS',
@@ -15,9 +18,9 @@ module MessagesHelper
       'Git',
       'SQL',
       'PostGreSQL',
+      'Unity 3D',
       'Photoshop',
       'Illustrator',
-      'Unity 3D',
     ]
   end
 
