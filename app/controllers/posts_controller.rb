@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy, :drafts]
 
   def index
     # posts = Post.where(published: true)
@@ -23,9 +23,13 @@ class PostsController < ApplicationController
   end
 
   def archive
-    @posts = Post.all.order(:created_at).reverse
+    @posts = Post.where(published: true).order(:created_at).reverse
     @categories = Category.all.collect { |category| category.category_name }
     @tags = Tag.all.collect { |tag| tag.tag_name }
+  end
+
+  def drafts
+    @drafts = Post.where(published: false).order(:created_at).reverse
   end
 
   def new
@@ -150,6 +154,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :published)
   end
 end

@@ -12,7 +12,8 @@
  *
  *= require font-awesome
  *= require animate
- *= require_tree ./v1
+ *= require prism
+ *= require ./v1/style
  */
 
  @import "materialize/components/color";

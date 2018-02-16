@@ -1,0 +1,20 @@
+<div class="page-container">
+  <div class="row">
+    <div class="col l6 m12 s12 offset-l3">
+      <h4 class="center">View All Drafts</h4>
+      <br>
+
+      <% if @drafts.count > 0 %>
+        <% @drafts.each do |draft| %>
+          <p>
+            <%= draft.created_at.strftime("%m/%d/%Y") %>:
+            <a href="/posts/<%= draft.id %>/edit"><%= draft.title %></a>
+          </p>
+        <% end %>
+      <% else %>
+        <p>There are no drafts.</p>
+      <% end %>
+
+    </div>
+  </div>
+</div>

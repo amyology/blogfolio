@@ -31,7 +31,10 @@
         <%= label_tag :tags, nil, class: 'active' %>
         <%= text_field_tag :tag_string %>
 
-        <%= f.submit 'Post', class: 'waves-effect waves-light btn' %>
+        <%= f.label :published, nil, class: 'active' %>
+        <%= f.text_field :published %>
+
+        <%= f.submit 'Save', class: 'waves-effect waves-light btn' %>
       <% end %>
 
     </div>

@@ -25,6 +25,9 @@
         <%= label_tag :tags, nil, class: 'active' %>
         <%= text_field_tag :tag_string, @tag_string %>
 
+        <%= f.label :published, class: 'active' %>
+        <%= f.text_field :published, class: 'validate' %>
+
         <%= f.submit 'Update', class: 'waves-effect waves-light btn' %>
       <% end %>
 
